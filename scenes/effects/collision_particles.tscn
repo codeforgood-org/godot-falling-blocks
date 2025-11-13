@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://i4r5s0t1u2v3w"]
+
+[ext_resource type="Script" path="res://scripts/collision_particles.gd" id="1_particles"]
+
+[node name="CollisionParticles" type="CPUParticles2D"]
+script = ExtResource("1_particles")

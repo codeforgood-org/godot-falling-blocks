@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://f1o2p7q8r9s0t"]
+
+[ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_start_menu"]
+
+[node name="StartMenu" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_start_menu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.133, 0.133, 0.18, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "FALLING BLOCKS"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Dodge the blocks and survive!"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="InstructionsLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Controls:
+← → or A D to move
+P or ESC to pause
+R to restart"
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="StartLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Press SPACE or ENTER to Start"
+horizontal_alignment = 1
+
+[node name="AnimationTimer" type="Timer" parent="."]
+wait_time = 0.8
+autostart = true
+
+[connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]
