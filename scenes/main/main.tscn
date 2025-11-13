@@ -1,10 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://h3q4r9s0t1u2v"]
+[gd_scene load_steps=10 format=3 uid="uid://h3q4r9s0t1u2v"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
 [ext_resource type="PackedScene" uid="uid://d9m0n5o6p7q8r" path="res://scenes/ui/hud.tscn" id="2_hud"]
 [ext_resource type="PackedScene" uid="uid://e0n1o6p7q8r9s" path="res://scenes/ui/game_over_screen.tscn" id="3_game_over"]
 [ext_resource type="PackedScene" uid="uid://f1o2p7q8r9s0t" path="res://scenes/ui/start_menu.tscn" id="4_start"]
 [ext_resource type="PackedScene" uid="uid://g2p3q8r9s0t1u" path="res://scenes/ui/pause_menu.tscn" id="5_pause"]
+[ext_resource type="PackedScene" uid="uid://j5s6t1u2v3w4x" path="res://scenes/ui/settings_menu.tscn" id="6_settings"]
+[ext_resource type="PackedScene" uid="uid://l7u8v3w4x5y6z" path="res://scenes/ui/help_screen.tscn" id="7_help"]
+[ext_resource type="PackedScene" uid="uid://m8v9w4x5y6z7a" path="res://scenes/ui/achievements_screen.tscn" id="8_achievements"]
+[ext_resource type="PackedScene" uid="uid://n9w0x5y6z7a8b" path="res://scenes/ui/statistics_screen.tscn" id="9_statistics"]
+[ext_resource type="PackedScene" uid="uid://o0x1y6z7a8b9c" path="res://scenes/ui/debug_overlay.tscn" id="10_debug"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_main")
@@ -21,3 +26,13 @@ color = Color(0.133, 0.133, 0.18, 1)
 [node name="StartMenu" parent="." instance=ExtResource("4_start")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_pause")]
+
+[node name="SettingsMenu" parent="." instance=ExtResource("6_settings")]
+
+[node name="HelpScreen" parent="." instance=ExtResource("7_help")]
+
+[node name="AchievementsScreen" parent="." instance=ExtResource("8_achievements")]
+
+[node name="StatisticsScreen" parent="." instance=ExtResource("9_statistics")]
+
+[node name="DebugOverlay" parent="." instance=ExtResource("10_debug")]

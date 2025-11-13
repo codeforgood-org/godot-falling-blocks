@@ -19,14 +19,41 @@ Falling Blocks is a classic arcade-style game where you control a blue square tr
 
 ### Features
 
+#### Core Gameplay
 - ✨ **Simple but engaging gameplay** - Easy to learn, hard to master
-- 📈 **Progressive difficulty** - Game gets harder the longer you survive
-- 🏆 **Score tracking** - Earn points and beat your high score
+- 📈 **Progressive difficulty** - Game gets harder the longer you survive (4 difficulty presets)
+- 🏆 **Advanced scoring system** - Score multipliers and combo bonuses
 - ⏱️ **Survival timer** - Track how long you've lasted
-- 🎨 **Clean, minimalist design** - Focus on gameplay
-- 💾 **Persistent high scores** - Your best score is saved automatically
+- 🎨 **Clean, minimalist design** - Focus on pure gameplay
+- 💾 **Persistent data** - High scores, achievements, and statistics saved automatically
 - ⏸️ **Pause functionality** - Take a break when needed
 - 🔄 **Quick restart** - Jump back in instantly after game over
+
+#### Power-Up System
+- 🛡️ **Shield** - Temporary invincibility (Cyan)
+- ⏰ **Slow Motion** - Slows falling blocks (Yellow)
+- 💰 **2x Score Multiplier** - Double your points (Gold)
+- 📏 **Shrink** - Reduces player size for easier dodging (Magenta)
+
+#### Combo & Progression
+- 🔥 **Combo system** - Build combos for massive score multipliers
+- 📊 **Dynamic multipliers** - Up to 10x multiplier at 100+ combo
+- 🎯 **Skill-based scoring** - Rewards consistent dodging
+
+#### Achievements & Statistics
+- 🏅 **17 Achievements** - Unlock milestones as you play
+- 📈 **Lifetime statistics** - Track total games, time played, best scores
+- 📊 **Per-game stats** - See your performance after each run
+
+#### Customization & Settings
+- ⚙️ **Settings menu** - Adjust music/SFX volume, fullscreen, difficulty
+- 🎵 **Audio system** - Sound effects and music support
+- 🖥️ **Debug mode** - Press F3 for performance overlay
+
+#### Polish & Feel
+- 💥 **Screen shake** - Impact feedback on collisions
+- ✨ **Visual effects** - Particle systems and animations
+- 🎮 **Game feel** - Polished with smooth animations and responsive controls
 
 ## 🎯 How to Play
 
@@ -39,17 +66,25 @@ Falling Blocks is a classic arcade-style game where you control a blue square tr
 | Pause | P or ESC |
 | Restart | R (after game over) |
 | Start Game | Space or Enter |
+| Debug Overlay | F3 |
+| Help Screen | H (from menu) |
+| Achievements | A (from menu) |
+| Statistics | S (from menu) |
+| Settings | O (from menu) |
 
 ### Objective
 
 - Dodge falling red blocks by moving left and right
 - Survive as long as possible to increase your score
 - Each block that passes you safely awards points
-- Collision with any block ends the game
+- **Build combos** by dodging consecutive blocks for score multipliers
+- **Collect power-ups** (colored squares) for temporary abilities
+- **Avoid collisions** - hitting a block ends the game (unless you have a shield!)
 - The game gets progressively harder with:
   - Faster falling blocks
   - More frequent spawns
   - Higher difficulty levels every 10 seconds
+  - Adjustable difficulty presets (Easy, Normal, Hard, Extreme)
 
 ## 🚀 Getting Started
 
