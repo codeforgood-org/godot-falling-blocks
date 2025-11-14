@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://k6t7u2v3w4x5y"]
+
+[ext_resource type="Script" path="res://scripts/powerup.gd" id="1_powerup"]
+
+[node name="PowerUp" type="ColorRect"]
+script = ExtResource("1_powerup")

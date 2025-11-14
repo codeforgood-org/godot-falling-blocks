@@ -1,0 +1,10 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" fill="#363d52"/>
+
+  <!-- Falling block -->
+  <rect x="50" y="20" width="28" height="28" fill="#ff4444" stroke="#cc0000" stroke-width="2"/>
+
+  <!-- Player block -->
+  <rect x="50" y="80" width="28" height="28" fill="#4444ff" stroke="#0000cc" stroke-width="2"/>
+</svg>

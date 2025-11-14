@@ -1,0 +1,136 @@
+[gd_scene load_steps=2 format=3 uid="uid://l7u8v3w4x5y6z"]
+
+[ext_resource type="Script" path="res://scripts/help_screen.gd" id="1_help"]
+
+[node name="HelpScreen" type="CanvasLayer"]
+layer = 15
+visible = false
+script = ExtResource("1_help")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TitleLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ObjectiveLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Objective"
+
+[node name="ObjectiveText" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Dodge falling red blocks and survive as long as possible!
+The longer you survive, the higher your score."
+autowrap_mode = 3
+
+[node name="ControlsLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Controls"
+
+[node name="ControlsText" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "← → or A D - Move left/right
+P or ESC - Pause game
+R - Restart (after game over)
+Space/Enter - Start game"
+autowrap_mode = 3
+
+[node name="GameplayLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Gameplay Features"
+
+[node name="GameplayText" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "• Score increases for each block you dodge
+• Difficulty increases every 10 seconds
+• Build combos by dodging consecutive blocks
+• Collect power-ups for special abilities
+• Unlock achievements by reaching milestones"
+autowrap_mode = 3
+
+[node name="PowerUpsLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Power-Ups"
+
+[node name="ShieldLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "■ Cyan - Shield: Temporary invincibility"
+
+[node name="SlowLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "■ Yellow - Slow Motion: Slows falling blocks"
+
+[node name="MultiplierLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+text = "■ Gold - 2x Score: Doubles points earned"
+
+[node name="ShrinkLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+text = "■ Magenta - Shrink: Reduces player size"
+
+[node name="TipsLabel" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Tips"
+
+[node name="TipsText" type="Label" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "• Stay near the center for more reaction time
+• Watch the spawn pattern of blocks
+• Maintain combos for bonus multipliers
+• Prioritize power-ups when safe to collect
+• Practice makes perfect!"
+autowrap_mode = 3
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Close (ESC or ENTER)"
+
+[connection signal="pressed" from="ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/CloseButton" to="." method="_on_close_pressed"]
